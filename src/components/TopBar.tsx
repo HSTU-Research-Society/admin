@@ -93,40 +93,43 @@ export default function TopBar() {
           ]} 
         />
 
-        <DropdownMenu label="Library" active={pathname.startsWith("/resources/library")} pathname={pathname} items={[
-          { href: "/resources/library/books",         label: "Books" },
-          { href: "/resources/library/papers",        label: "Research Papers" },
-          { href: "/resources/library/lecture-notes", label: "Lecture Notes" },
-          { href: "/resources/library/thesis",        label: "Thesis Repository" },
-        ]} />
-
-        <DropdownMenu label="Opportunities" active={pathname.startsWith("/resources/opportunities")} pathname={pathname} items={[
-          { href: "/resources/opportunities/scholarships",  label: "Scholarships" },
-          { href: "/resources/opportunities/internships",   label: "Internships" },
-          { href: "/resources/opportunities/fellowships",   label: "Fellowships" },
-          { href: "/resources/opportunities/conferences",   label: "Conferences" },
-          { href: "/resources/opportunities/competitions",  label: "Competitions" },
-        ]} />
-
-        <DropdownMenu label="Learning" active={pathname.startsWith("/resources/learning")} pathname={pathname} items={[
-          { href: "/resources/learning/tutorials",  label: "Tutorials" },
-          { href: "/resources/learning/workshops",  label: "Workshops" },
-          { href: "/resources/learning/datasets",   label: "Datasets" },
-        ]} />
+        {/* Resources Dropdown */}
+        <DropdownMenu 
+          label="Resources" 
+          active={pathname.startsWith("/resources")} 
+          pathname={pathname} 
+          items={[
+            { href: "/resources/library/books",         label: "Books" },
+            { href: "/resources/library/papers",        label: "Research Papers" },
+            { href: "/resources/library/lecture-notes", label: "Lecture Notes" },
+            { href: "/resources/library/thesis",        label: "Thesis Repository" },
+            { href: "/resources/opportunities/scholarships",  label: "Scholarships" },
+            { href: "/resources/opportunities/internships",   label: "Internships" },
+            { href: "/resources/opportunities/fellowships",   label: "Fellowships" },
+            { href: "/resources/opportunities/conferences",   label: "Conferences" },
+            { href: "/resources/opportunities/competitions",  label: "Competitions" },
+            { href: "/resources/learning/tutorials",  label: "Learning Tutorials" },
+            { href: "/resources/learning/workshops",  label: "Workshops" },
+            { href: "/resources/learning/datasets",   label: "Datasets" },
+          ]} 
+        />
 
         <Link href="/resources/downloads" style={navLink(pathname === "/resources/downloads")}>Downloads</Link>
 
-        <DropdownMenu label="Blog" active={pathname.startsWith("/media/blog")} pathname={pathname} items={[
-          { href: "/media/blog/research-articles", label: "Research Articles" },
-          { href: "/media/blog/tutorials",         label: "Blog Tutorials" },
-          { href: "/media/blog/tech-insights",     label: "Tech Insights" },
-        ]} />
-
-        <DropdownMenu label="Gallery" active={pathname.startsWith("/media/gallery")} pathname={pathname} items={[
-          { href: "/media/gallery/albums", label: "Albums" },
-          { href: "/media/gallery/photos", label: "Photos" },
-          { href: "/media/gallery/videos", label: "Videos" },
-        ]} />
+        {/* Media Dropdown */}
+        <DropdownMenu 
+          label="Media" 
+          active={pathname.startsWith("/media")} 
+          pathname={pathname} 
+          items={[
+            { href: "/media/blog/research-articles", label: "Research Articles" },
+            { href: "/media/blog/tutorials",         label: "Blog Tutorials" },
+            { href: "/media/blog/tech-insights",     label: "Tech Insights" },
+            { href: "/media/gallery/albums", label: "Albums" },
+            { href: "/media/gallery/photos", label: "Photos" },
+            { href: "/media/gallery/videos", label: "Videos" },
+          ]} 
+        />
 
         <DropdownMenu label="Community" active={pathname.startsWith("/community")} pathname={pathname} items={[
           { href: "/community/volunteer/call",            label: "Volunteer Calls" },
