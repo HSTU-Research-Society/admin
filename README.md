@@ -25,16 +25,12 @@ This is the official administrative dashboard for the HSTU Research Society. It 
 1.  Clone the repository.
 2.  Install dependencies: `npm install`.
 3.  Configure Environment Variables (`.env.local`):
-    ```env
-    NEXT_PUBLIC_FIREBASE_API_KEY=your_key
-    NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=your_domain
-    NEXT_PUBLIC_FIREBASE_PROJECT_ID=your_id
-    NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=your_bucket
-    NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=your_sender_id
-    NEXT_PUBLIC_FIREBASE_APP_ID=your_app_id
-    NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID=your_measurement_id
-    ```
+    - See [.env.example](.env.example) for the list of required variables.
 4.  Run development server: `npm run dev`.
+
+## 📦 Deployment
+
+For detailed instructions on how to deploy this project to Vercel, please refer to the [Vercel Deployment Guide](VERCEL_DEPLOYMENT.md).
 
 ---
 © 2026 HSTU Research Society
